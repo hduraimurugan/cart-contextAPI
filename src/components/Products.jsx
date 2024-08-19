@@ -92,8 +92,11 @@ export default function Products() {
 
       <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 px-10'>
         {filteredProducts.map(product => (
-          <div key={product.id} className='bg-white shadow-md rounded-lg px-10 py-10'>
+          <div key={product.id} className='bg-white shadow-md rounded-lg flex flex-col justify-between px-10 py-10'>
+            
+            <div>
             <img src={product.image} alt={product.title} className='rounded-md h-48' />
+            </div>
             
             <div className='mt-4'>
               <h1 className='text-lg uppercase font-bold'>{product.title}</h1>
